@@ -17,6 +17,13 @@
 		5DE547B42C1ED18B00DD870A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DE547B32C1ED18B00DD870A /* GoogleService-Info.plist */; };
 		5DE547B72C1ED2B000DD870A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE547B62C1ED2B000DD870A /* FirebaseAnalytics */; };
 		5DE547B92C1ED2B000DD870A /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5DE547B82C1ED2B000DD870A /* FirebaseAnalyticsSwift */; };
+		5DE547C22C1EE80A00DD870A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE547C12C1EE80A00DD870A /* LoginView.swift */; };
+		5DE547C62C1EE95900DD870A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE547C52C1EE95900DD870A /* Colors.swift */; };
+		5DE547C82C1EEB6B00DD870A /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE547C72C1EEB6B00DD870A /* InputView.swift */; };
+		5DE547CA2C1F1F4600DD870A /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE547C92C1F1F4600DD870A /* RegistrationView.swift */; };
+		5DE5480B2C1F23E100DD870A /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5480A2C1F23E100DD870A /* FeedView.swift */; };
+		5DE5480D2C1F240100DD870A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5480C2C1F240100DD870A /* ProfileView.swift */; };
+		5DE5480F2C1F262100DD870A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE5480E2C1F262100DD870A /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +55,13 @@
 		5DE547A42C1ECD1600DD870A /* SecureAuthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthUITests.swift; sourceTree = "<group>"; };
 		5DE547A62C1ECD1600DD870A /* SecureAuthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5DE547B32C1ED18B00DD870A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5DE547C12C1EE80A00DD870A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5DE547C52C1EE95900DD870A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5DE547C72C1EEB6B00DD870A /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		5DE547C92C1F1F4600DD870A /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		5DE5480A2C1F23E100DD870A /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		5DE5480C2C1F240100DD870A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5DE5480E2C1F262100DD870A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +114,7 @@
 		5DE547882C1ECD1400DD870A /* SecureAuth */ = {
 			isa = PBXGroup;
 			children = (
+				5DE547C42C1EE94A00DD870A /* Extensions */,
 				5DE547BD2C1EE44E00DD870A /* Components */,
 				5DE547BC2C1EE44500DD870A /* App */,
 				5DE547BB2C1EE42600DD870A /* Models */,
@@ -140,6 +155,10 @@
 		5DE547BA2C1EE42000DD870A /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				5DE548092C1F23AB00DD870A /* Feed */,
+				5DE547C02C1EE7E000DD870A /* Authentification */,
+				5DE547BF2C1EE7D800DD870A /* Profile */,
+				5DE547BE2C1EE7D400DD870A /* Root */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -147,6 +166,7 @@
 		5DE547BB2C1EE42600DD870A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5DE5480E2C1F262100DD870A /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,8 +182,49 @@
 		5DE547BD2C1EE44E00DD870A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5DE547C72C1EEB6B00DD870A /* InputView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		5DE547BE2C1EE7D400DD870A /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		5DE547BF2C1EE7D800DD870A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				5DE5480C2C1F240100DD870A /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		5DE547C02C1EE7E000DD870A /* Authentification */ = {
+			isa = PBXGroup;
+			children = (
+				5DE547C12C1EE80A00DD870A /* LoginView.swift */,
+				5DE547C92C1F1F4600DD870A /* RegistrationView.swift */,
+			);
+			path = Authentification;
+			sourceTree = "<group>";
+		};
+		5DE547C42C1EE94A00DD870A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5DE547C52C1EE95900DD870A /* Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5DE548092C1F23AB00DD870A /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5DE5480A2C1F23E100DD870A /* FeedView.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +365,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE5480D2C1F240100DD870A /* ProfileView.swift in Sources */,
+				5DE5480B2C1F23E100DD870A /* FeedView.swift in Sources */,
+				5DE547C22C1EE80A00DD870A /* LoginView.swift in Sources */,
+				5DE547C62C1EE95900DD870A /* Colors.swift in Sources */,
+				5DE547C82C1EEB6B00DD870A /* InputView.swift in Sources */,
+				5DE5480F2C1F262100DD870A /* User.swift in Sources */,
+				5DE547CA2C1F1F4600DD870A /* RegistrationView.swift in Sources */,
 				5DE5478C2C1ECD1400DD870A /* ContentView.swift in Sources */,
 				5DE5478A2C1ECD1400DD870A /* SecureAuthApp.swift in Sources */,
 			);
