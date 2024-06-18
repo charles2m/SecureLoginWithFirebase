@@ -8,49 +8,56 @@
 import SwiftUI
 
 struct ProfileView: View {
-    
+    @EnvironmentObject var viewModel: AuthViewModel
     var body: some View {
    
-        HStack {
-            
-            Button(action: {
-              
-            }, label: {
-                Image(systemName: "arrow.left")
-                    .resizable()
-                    .frame(width:20,height:16)
-                    .foregroundColor(.neutral900)
+            if let user = viewModel.currentUser {
                 
-            })
-            Spacer()
-       
-            Text(User.MOCK_USER.fullname)
-                    .bold()
-                
-                Menu {
+                HStack {
+                    
                     Button(action: {
-                       
-                    }) {
-                        Text("Se déconnecter")
+                        
+                    }, label: {
+                        Image(systemName: "arrow.left")
+                            .resizable()
+                            .frame(width:20,height:16)
+                            .foregroundColor(.neutral900)
+                        
+                    })
+                    Spacer()
+                    
+                    Text(user.fullname)
+                        .bold()
+                    
+                    Menu {
+                        Button(action: {
+                            viewModel.signOut()
+                        }) {
+                            Text("Se déconnecter")
+                            
+                        }
+                        
+                        Button(action: {
+                            
+                        }) {
+                            Text("Effacer son compte")
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                            .resizable()
+                            .frame(width: 30, height: 30)
                         
                     }
                     
-                    Button(action: {
-                       
-                    }) {
-                        Text("Effacer son compte")
-                    }
-                } label: {
-                    Image(systemName: "ellipsis.circle")
-                        .resizable()
-                        .frame(width: 30, height: 30)
-                       
                 }
+                .foregroundColor(.neutral900)
+                .padding()
+               
+            }
+         
+            Spacer()
             
-        }
-        .foregroundColor(.neutral900)
-        .padding()
-        Spacer()
+        
     }
 }
 
