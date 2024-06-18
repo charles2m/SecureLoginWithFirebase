@@ -11,11 +11,12 @@ import Firebase
 struct SecureAuthApp: App {
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    @StateObject var viewModel = AuthViewModel()
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
 }
