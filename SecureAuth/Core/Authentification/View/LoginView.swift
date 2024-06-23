@@ -39,6 +39,20 @@ struct LoginView: View {
                                   title: "Password",
                                   placeholder: "Enter your password",isSecureField: true)
                         
+                        HStack {
+                            Spacer()
+                            NavigationLink {
+                                ForgetPasswordView()
+                            } label: {
+                                Text("Forgot your password ? ")
+                                    .font(.caption)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.primary800)
+                                    .padding(.bottom,8)
+                                    
+                            }
+                        }
+                        
                     }
                     .padding(.horizontal)
                     .padding(.top,12)
@@ -58,6 +72,8 @@ struct LoginView: View {
                         .frame(width:UIScreen.main.bounds.width - 32, height: 48)
                     }
                     .background(Color.primary800)
+                    .disabled(formIsValid)
+                    .opacity(formIsValid ? 1.0 : 0.5)
                     .cornerRadius(10)
                     
                     // sign in button

@@ -39,14 +39,32 @@ struct RegistrationView: View {
                     InputView(text: $fullname,
                               title: "Full Name",
                               placeholder: "Enter your name")
-                    
-                    InputView(text: $password,
-                              title: "Password",
-                              placeholder: "Enter your password",isSecureField: true)
-                    
-                    InputView(text: $confirmPassword,
-                              title: "Confirm Password",
-                              placeholder: "Confirm your password",isSecureField: true)
+                    ZStack(alignment:.trailing){
+                        InputView(text: $password,
+                                  title: "Password",
+                                  placeholder: "Enter your password",isSecureField: true)
+                    }
+                        
+                        ZStack(alignment:.trailing){
+                        InputView(text: $confirmPassword,
+                                  title: "Confirm Password",
+                                  placeholder: "Confirm your password",isSecureField: true)
+                            
+                            if !password.isEmpty && !confirmPassword.isEmpty{
+                                if password == confirmPassword{
+                                    Image(systemName: "checkmark.circle.fill")
+                                        .imageScale(.large)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color(.systemGreen))
+                                }else{
+                                    Image(systemName: "xmark.circle.fill")
+                                        .imageScale(.large)
+                                        .fontWeight(.bold)
+                                        .foregroundColor(Color(.systemRed))
+                                }
+                            }
+                    }
+                   
                     
                 }
                 .padding(.horizontal)
@@ -67,9 +85,13 @@ struct RegistrationView: View {
                         
                     })
                     .foregroundColor((.neutral200))
+                   
                     .frame(width:UIScreen.main.bounds.width - 32, height: 48)
+                    
                 }
                 .background(Color.primary800)
+               // .disabled(formIsValid)
+                .opacity(formIsValid ? 1.0 : 0.5)
                 .cornerRadius(10)
                 
                 // sign in button
@@ -81,7 +103,7 @@ struct RegistrationView: View {
                     }, label: {
                         HStack(spacing:2){
                             Text("Already have an account ? ")
-                            Text("Sign up")
+                            Text("Sign in")
                                 .fontWeight(.bold)
                         }
                         .font(.system(size: 14))
@@ -92,6 +114,18 @@ struct RegistrationView: View {
         }
     }
 }
+
+extension RegistrationView:AuthenticationFormProtocol{
+    
+    var formIsValid: Bool {
+        return !email.isEmpty && email.contains("@")
+        && !password.isEmpty
+        && password.count > 5
+        && !fullname.isEmpty
+        && confirmPassword == password
+    }
+}
+
 #Preview {
     RegistrationView()
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2134C32C23007A00A1BEA0 /* ForgetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2134C22C23007A00A1BEA0 /* ForgetPasswordView.swift */; };
 		5D98C4642C21BCC300C047A3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98C4632C21BCC300C047A3 /* AuthViewModel.swift */; };
 		5D98C4672C21BEC500C047A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D98C4662C21BEC500C047A3 /* FirebaseAuth */; };
 		5D98C4692C21BED600C047A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5D98C4682C21BED600C047A3 /* FirebaseFirestore */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D2134C22C23007A00A1BEA0 /* ForgetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordView.swift; sourceTree = "<group>"; };
 		5D98C4632C21BCC300C047A3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		5DE547862C1ECD1400DD870A /* SecureAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE547892C1ECD1400DD870A /* SecureAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthApp.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			children = (
 				5DE547C12C1EE80A00DD870A /* LoginView.swift */,
 				5DE547C92C1F1F4600DD870A /* RegistrationView.swift */,
+				5D2134C22C23007A00A1BEA0 /* ForgetPasswordView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				5DE5480F2C1F262100DD870A /* User.swift in Sources */,
 				5DE547CA2C1F1F4600DD870A /* RegistrationView.swift in Sources */,
 				5DE5478C2C1ECD1400DD870A /* ContentView.swift in Sources */,
+				5D2134C32C23007A00A1BEA0 /* ForgetPasswordView.swift in Sources */,
 				5DE5478A2C1ECD1400DD870A /* SecureAuthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,8 @@ class AuthViewModel : ObservableObject {
     
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
-    
+    @Published var errString: String?
+        @Published var successMessage: String?
     init() {
         
         self.userSession = Auth.auth().currentUser
@@ -45,6 +46,19 @@ class AuthViewModel : ObservableObject {
         
         
     }
+    
+    func forgotPassword(for email: String) {
+           Auth.auth().sendPasswordReset(withEmail: email) { error in
+               if let error = error {
+                   self.errString = error.localizedDescription
+                   self.successMessage = nil
+               } else {
+                   self.successMessage = "Un e-mail de réinitialisation de mot de passe a été envoyé."
+                   self.errString = nil
+               }
+           }
+       }
+   
     
     
     func createUser(withEmail email:String, password: String, fullname:String ) async throws {
