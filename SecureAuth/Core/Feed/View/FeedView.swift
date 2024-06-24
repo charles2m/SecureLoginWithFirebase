@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FeedView: View {
+    @State var isHide = false
     var body: some View {
         
         NavigationStack{
@@ -68,4 +69,32 @@ extension FeedView {
         }.background(Color.secondaryYellow200)
     }
         
+}
+extension FeedView {
+    
+    var scrollTracker: some View {
+        
+        GeometryReader { reader -> AnyView in
+            
+            let yAxis = reader.frame(in: .global).minY
+            print(yAxis)
+            if yAxis < 0 && !isHide {
+                DispatchQueue.main.async {
+                    withAnimation {isHide = true}
+                    
+                    
+                }
+            }
+            if yAxis > 0 && isHide {
+                DispatchQueue.main.async {
+                    withAnimation {
+                        isHide = false
+                    }
+                    
+                }
+            }
+            return  AnyView(Text("")
+                .frame(width:0, height:0))
+        }
+    }
 }
