@@ -15,7 +15,7 @@ struct SecureAuthApp: App {
     
     var body: some Scene {
         WindowGroup {
-            FeedView()
+            ContentView()
                 .environmentObject(viewModel)
         }
     }

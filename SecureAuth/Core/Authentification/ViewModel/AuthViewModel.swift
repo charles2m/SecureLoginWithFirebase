@@ -24,6 +24,7 @@ class AuthViewModel : ObservableObject {
     @Published var currentUser: User?
     @Published var errString: String?
         @Published var successMessage: String?
+    
     init() {
         
         self.userSession = Auth.auth().currentUser

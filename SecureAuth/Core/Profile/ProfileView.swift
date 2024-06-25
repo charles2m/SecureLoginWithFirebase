@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @EnvironmentObject var viewModel: AuthViewModel
+  //  @EnvironmentObject var viewModel: AuthViewModel
+    @StateObject var viewModel = ProfileViewModel()
     var body: some View {
    
             if let user = viewModel.currentUser {
@@ -31,7 +32,7 @@ struct ProfileView: View {
                     
                     Menu {
                         Button(action: {
-                            viewModel.signOut()
+                            // viewModel.signOut()
                         }) {
                             Text("Se déconnecter")
                             

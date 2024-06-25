@@ -13,6 +13,8 @@
 		5D597BC62C28713000CFE49B /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597BC52C28713000CFE49B /* ExploreView.swift */; };
 		5D597BCA2C28760100CFE49B /* FeedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597BC92C28760100CFE49B /* FeedItemView.swift */; };
 		5D597BCD2C28831900CFE49B /* SparkleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D597BCC2C28831900CFE49B /* SparkleButton.swift */; };
+		5D6D19262C2AB7BE00D3DB56 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D19252C2AB7BE00D3DB56 /* UserService.swift */; };
+		5D6D19282C2AB9D500D3DB56 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D6D19272C2AB9D500D3DB56 /* ProfileViewModel.swift */; };
 		5D98C4642C21BCC300C047A3 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D98C4632C21BCC300C047A3 /* AuthViewModel.swift */; };
 		5D98C4672C21BEC500C047A3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5D98C4662C21BEC500C047A3 /* FirebaseAuth */; };
 		5D98C4692C21BED600C047A3 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5D98C4682C21BED600C047A3 /* FirebaseFirestore */; };
@@ -60,6 +62,8 @@
 		5D597BC52C28713000CFE49B /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		5D597BC92C28760100CFE49B /* FeedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemView.swift; sourceTree = "<group>"; };
 		5D597BCC2C28831900CFE49B /* SparkleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkleButton.swift; sourceTree = "<group>"; };
+		5D6D19252C2AB7BE00D3DB56 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		5D6D19272C2AB9D500D3DB56 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5D98C4632C21BCC300C047A3 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		5DE547862C1ECD1400DD870A /* SecureAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DE547892C1ECD1400DD870A /* SecureAuthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureAuthApp.swift; sourceTree = "<group>"; };
@@ -152,6 +156,14 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		5D6D19242C2AB7AF00D3DB56 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D6D19252C2AB7BE00D3DB56 /* UserService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		5D98C4612C21BC9F00C047A3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +213,7 @@
 		5DE547882C1ECD1400DD870A /* SecureAuth */ = {
 			isa = PBXGroup;
 			children = (
+				5D6D19242C2AB7AF00D3DB56 /* Services */,
 				5DE547C42C1EE94A00DD870A /* Extensions */,
 				5DE547BD2C1EE44E00DD870A /* Components */,
 				5DE547BC2C1EE44500DD870A /* App */,
@@ -289,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE5480C2C1F240100DD870A /* ProfileView.swift */,
+				5D6D19272C2AB9D500D3DB56 /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -465,11 +479,13 @@
 				5D597BC32C28711900CFE49B /* SelectionView.swift in Sources */,
 				5DE5480B2C1F23E100DD870A /* FeedView.swift in Sources */,
 				5D597BCA2C28760100CFE49B /* FeedItemView.swift in Sources */,
+				5D6D19262C2AB7BE00D3DB56 /* UserService.swift in Sources */,
 				5DE547C22C1EE80A00DD870A /* LoginView.swift in Sources */,
 				5DE547C62C1EE95900DD870A /* Colors.swift in Sources */,
 				5DE547C82C1EEB6B00DD870A /* InputView.swift in Sources */,
 				5DE5480F2C1F262100DD870A /* User.swift in Sources */,
 				5DE547CA2C1F1F4600DD870A /* RegistrationView.swift in Sources */,
+				5D6D19282C2AB9D500D3DB56 /* ProfileViewModel.swift in Sources */,
 				5DE5478C2C1ECD1400DD870A /* ContentView.swift in Sources */,
 				5D597BCD2C28831900CFE49B /* SparkleButton.swift in Sources */,
 				5D2134C32C23007A00A1BEA0 /* ForgetPasswordView.swift in Sources */,
